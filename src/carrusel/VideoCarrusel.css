@@ -1,0 +1,51 @@
+.video-carousel-container {
+    position: relative; /* Establece el contenedor como referencia para el posicionamiento absoluto */
+    height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana del navegador */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos dentro del contenedor */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+  }
+.texto_video{
+    display: flex;
+    justify-content: start;
+    text-align: center;
+}
+  .video-player {
+    position: absolute; /* Posiciona el reproductor de video de forma absoluta */
+    top: 50%; /* Alinea el reproductor de video en el centro vertical */
+    left: 50%; /* Alinea el reproductor de video en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centra el reproductor de video */
+    z-index: 1; /* Coloca el reproductor de video encima de otros elementos */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2; /* Asegura que el botón de cierre esté por encima del reproductor de video */
+  }
+  
+  
+  .video-carousel {
+    display: flex;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    scroll-behavior: smooth; /* Hace que el desplazamiento sea suave */
+    scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+    -ms-overflow-style: none; /* Oculta la barra de desplazamiento en Edge */
+  }
+  .video-thumbnail img {
+    width: 150px; /* Ajusta el ancho de la miniatura */
+    height: auto; /* Mantiene la proporción de la imagen */
+  }
+  .video-carousel::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en navegadores webkit */
+  }
+  
+  .video-thumbnails {
+    display: flex;
+  }
+  
+  .video-thumbnail {
+    flex: 0 0 auto; /* Hace que los elementos no se estiren para llenar el contenedor */
+    margin-right: 10px; /* Espacio entre miniaturas */
+  }

@@ -1,0 +1,111 @@
+.container { /* Contededor general */
+    background-color: #222;
+    position: relative;
+}
+
+.box__ { /*Cajas*/
+    width: auto;
+    height: 800px;
+    background-color: #000;
+    margin-bottom: 11px;
+    border-radius: 10px;
+    color:#fff;
+}
+
+.fondo__ {/*Fondo con Imagen*/
+    background-image: url("../images/Banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 680px;
+    position: relative;
+    z-index: 1;
+    width: auto;
+    margin-bottom: 11px;
+    border-radius: 10px;
+}
+
+.overlay__ { /*Sombreado negro del fondo*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+}
+
+.nav__ { /*Barra de Logo y Inicio de Sesion*/
+    background-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__ { /*Logo (Suiza Flix)*/
+    color: #f00;
+    margin-left: 50px;
+    font-family:'Lucida Sans';
+    font-size: 35px
+}
+
+.sesion__ { /*Boton Iniciar Sesión*/
+    color: #fff;
+    background-color: rgb(223, 18, 18);
+    padding: 13px;
+    font-family: Arial;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-right: 50px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color:#fff;
+    font-family: Arial;
+}
+p{ /*Parrafo del texto del centro*/
+    font-size: 20px;
+}
+.email__ { /*Input Email*/
+    background-color: #222a;
+    padding: 6px;
+    height: 47px;
+    width: 400px;
+    border-radius: 5px;
+    border:2px solid #666;
+    color: #fff;
+    margin-right: 10px;
+    font-family: Arial;
+    font-size: 20px;
+}
+.email__::placeholder{ /*Texto dentro del Input Email*/
+    color:#fff6;
+    font-size: large;
+    font-family: Arial;
+}
+
+.boton__ { /*Boton Comenzar*/
+    background-color: rgb(223, 18, 18);
+    color: #fff;
+    border-radius: 7px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    padding: 21px;
+    cursor: pointer;
+}
+
+.content__ { /*Alinear todo el Contenido*/
+    text-align: center;
+    z-index: 10;
+}

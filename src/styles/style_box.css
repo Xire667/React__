@@ -1,0 +1,67 @@
+.caja_1{ /*Alinear Items de la caja uno*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+.sub_box{ /*Espacio entre hacia arriba de la caja de texto*/
+    margin-top: 5%;
+}
+.titulo_caja_1{ /*Caja de titulo*/
+    font-size: 35px;
+}
+.tv_caja_1{ /*Segunda caja*/
+    z-index: 9;
+    border-color:#fff;
+    height: 285px;
+    width: 500px;
+    background-color: #fff;
+    margin-top: 12%;
+    border-radius: 10px;
+    background-image: url("../images/tv_netflix.jpg");
+    background-size: cover; /* Ajusta la imagen para que cubra toda la caja */
+    background-position: center; /* Centra la imagen en la caja */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+/*/////////////////////////////////////////////////////////*/
+
+.caja_2{ /*Alinear Items de la caja dos*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+.sub_box_2{ /*Espacio entre hacia arriba de la caja de texto*/
+    margin-top: 5%;
+}
+.titulo_caja_2{ /*Caja de titulo*/
+    font-size: 27px;
+}
+.texto_caja_2{ /*caja de texto*/
+    font-size: 14px;
+}
+
+/*/////////////////////////////////////////////////////////*/
+
+.caja_3{ /*Alinear Items de la caja dos*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+.sub_box_3{ /*Espacio entre hacia arriba de la caja de texto*/
+    margin-top: 5%;
+}
+.titulo_caja_3{ /*Caja de titulo*/
+    font-size: 27px;
+}
+.texto_caja_3{ /*caja de texto*/
+    font-size: 14px;
+}

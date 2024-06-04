@@ -9,4 +9,4 @@ const Card = (props) => {
     </div>)
 }
 
-export default Card
+export default Card 
