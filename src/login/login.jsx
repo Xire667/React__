@@ -50,8 +50,23 @@ function Login() {
                         <p className="texto_caja_3">Pelicualas y series ilimitadas en tu telefono, tablet, laptop y TV.</p>
                     </div>
                 </div>
-                <div className="box__ caja_4"></div>
-                <div className="box__ caja_5"></div>
+                <div className="box__ caja_4">
+                    <div className="sub_box_4">
+                        <h2 className="titulo_caja_4">Crea perfiles para niños</h2>
+                        <p className="texto_caja_4">Los niños viviran aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos, sin costo con tu membresia.</p>
+                    </div>
+                </div>
+                <div className="box__ caja_5">
+                    <div className="sub_box_4">
+                        <h2 className="titulo_caja_5">Preguntas frecuentes</h2>
+                        <div className="preguntas__ pre_1">¿Qué es Suiza-Flix?</div>
+                        <div className="preguntas__ pre_2"></div>
+                        <div className="preguntas__ pre_3"></div>
+                        <div className="preguntas__ pre_4"></div>
+                        <div className="preguntas__ pre_5"></div>
+                        <div className="preguntas__ pre_6"></div>
+                    </div>
+                </div>
             </div>
         </div>
     )
