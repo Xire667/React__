@@ -1,111 +1,238 @@
-.container { /* Contededor general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background-color: #222;
-    position: relative;
+    color: #fff;
+    line-height: 1.5;
+}
+.section-features{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.box__ { /*Cajas*/
-    width: auto;
-    height: 800px;
-    background-color: #000;
-    margin-bottom: 11px;
-    border-radius: 10px;
-    color:#fff;
+.netflix-clone {
+    width: 100%;
+    min-height: 100vh;
 }
 
-.fondo__ {/*Fondo con Imagen*/
-    background-image: url("../images/Banner.jpg");
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.boton-iniciar {
+    background-color: #e50914;
+    color: #fff;
+    padding: 7px 17px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.caja-1 {
+    background-image: url('https://assets.nflxext.com/ffe/siteui/vlv3/f841d4c7-10e1-40af-bcae-07a3f8dc141a/f6d7434e-d6de-4185-a6d4-c77a2d08737b/US-en-20220502-popsignuptwoweeks-perspective_alpha_website_medium.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
     background-position: center;
-    height: 680px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     position: relative;
-    z-index: 1;
-    width: auto;
-    margin-bottom: 11px;
-    border-radius: 10px;
 }
 
-.overlay__ { /*Sombreado negro del fondo*/
+.caja-1::after {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
 }
 
-.nav__ { /*Barra de Logo y Inicio de Sesion*/
-    background-color: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.contenido-caja-1 {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    padding: 75px 0;
 }
 
-.logo__ { /*Logo (Suiza Flix)*/
-    color: #f00;
-    margin-left: 50px;
-    font-family:'Lucida Sans';
-    font-size: 35px
+.contenido-caja-1 h1 {
+    font-size: 3.125rem;
+    margin-bottom: 20px;
 }
 
-.sesion__ { /*Boton Iniciar Sesión*/
-    color: #fff;
-    background-color: rgb(223, 18, 18);
-    padding: 13px;
-    font-family: Arial;
-    font-size: 17px;
-    border-radius: 5px;
-    margin-right: 50px;
-    font-weight: bold;
-}
-a{
-    text-decoration: none;
-    color:#fff;
-    font-family: Arial;
+.contenido-caja-1 h2 {
+    font-size: 1.625rem;
+    font-weight: 400;
+    margin-bottom: 30px;
 }
 p{ /*Parrafo del texto del centro*/
     font-size: 20px;
 }
-.email__ { /*Input Email*/
-    background-color: #222a;
-    padding: 6px;
-    height: 47px;
-    width: 400px;
-    border-radius: 5px;
-    border:2px solid #666;
-    color: #fff;
-    margin-right: 10px;
-    font-family: Arial;
-    font-size: 20px;
-}
-.email__::placeholder{ /*Texto dentro del Input Email*/
-    color:#fff6;
-    font-size: large;
-    font-family: Arial;
+
+.email-div {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
 }
 
-.boton__ { /*Boton Comenzar*/
-    background-color: rgb(223, 18, 18);
+.email-div input {
+    padding: 15px 10px;
+    width: 450px;
+    font-size: 1rem;
+    border-color: #dddddd;
+    background-color: #222a;
+    margin-right: 8px;
+}
+
+.email-div button {
+    padding: 15px 30px;
+    font-size: 1.625rem;
+    background-color: #e50914;
     color: #fff;
-    border-radius: 7px;
-    font-size: 1.1rem;
-    font-weight: bold;
     border: none;
-    padding: 21px;
     cursor: pointer;
 }
 
-.content__ { /*Alinear todo el Contenido*/
+.cajas-general {
+    padding: 70px 45px;
+}
+
+.cajas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.feature-text {
+    width: 52%;
+}
+
+.feature-media {
+    width: 48%;
+    position: relative;
+}
+
+.feature-media img {
+    width: 100%;
+}
+
+.feature-media video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 73%;
+}
+
+.cajas h2 {
+    font-size: 3.125rem;
+    margin-bottom: 20px;
+}
+
+.cajas p {
+    font-size: 1.625rem;
+}
+
+.faq {
+    padding: 70px 45px;
     text-align: center;
-    z-index: 10;
+}
+
+.faq h2 {
+    font-size: 3.125rem;
+    margin-bottom: 40px;
+}
+
+.accordion {
+    margin: 0 auto;
+    width: 75%;
+    max-width: 815px;
+}
+
+.accordion-item {
+    background-color: #303030;
+    margin-bottom: 10px;
+}
+
+.accordion-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    font-size: 1.625rem;
+    cursor: pointer;
+}
+
+.accordion-answer {
+    background-color: #303030;
+    padding: 20px 30px;
+    font-size: 1.625rem;
+    text-align: left;
+}
+
+footer {
+    padding: 70px 45px;
+    color: #757575;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.links-abajo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+    font-size: 16px;
+}
+
+.links-abajo a {
+    color: #dddddd;
+}
+
+@media (max-width: 950px) {
+    .cajas {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-text, .feature-media {
+        width: 100%;
+    }
+
+    .email-div {
+        flex-direction: column;
+    }
+
+    .email-div input, .email-div button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .links-abajo {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

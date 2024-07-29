@@ -87,3 +87,25 @@
     margin-left: 50px;
     margin-right: 50px;
 }
+
+/*//////////////////////////////////////////////////////////*/
+
+.caja_5{ /*Alinear Items de la caja dos*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+.sub_box_5{ /*Espacio entre hacia arriba de la caja de texto*/
+    margin-top: 5%;
+}
+.titulo_caja_5{ /*Caja de titulo*/
+    font-size: 35px;
+}
+.texto_caja_5{ /*caja de texto*/
+    font-size: 18px;
+    margin-left: 50px;
+    margin-right: 50px;
+}

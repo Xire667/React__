@@ -180,3 +180,150 @@ body {
     transform: scale(1.1);
     /* Efecto de escala al pasar el ratón */
 }
+
+body {
+    background-color: #000;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+  .container_home {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 60px;
+    overflow-x: hidden;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(17, 17, 17, 0.5);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .logo_home {
+    color: #e50914;
+    font-size: 24px;
+    font-family: Verdana, sans-serif;
+    cursor: pointer;
+  }
+  
+  .nav_home,
+  .icons {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav_home li {
+    margin: 0 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .icons .item_nav {
+    cursor: pointer;
+  }
+  
+  .pelis {
+    background-size: cover;
+    background-position: center;
+    height: calc(100vh - 60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pelis_content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    max-width: 600px;
+  }
+  
+  .pelis_title {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .play_button {
+    background-color: #e50914;
+    color: #fff;
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .play_button:hover {
+    transform: scale(1.05);
+  }
+  
+  .recomenda {
+    padding: 20px;
+  }
+  
+  .recomenda h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .recomenda_lista {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+  }
+  
+  .recomenda_lista img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .recomenda_lista img.active {
+    transform: scale(1.1);
+  }
+  
+  .nav_buttons {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .nav_izq,
+  .nav_dere {
+    background-color: #e50914;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .nav_izq:hover,
+  .nav_dere:hover {
+    transform: scale(1.05);
+  }
+  
