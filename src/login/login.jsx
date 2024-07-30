@@ -18,10 +18,23 @@ function Accordion({ question, answer }) {
 
 function Login() {
     const navigate = useNavigate();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-    const handleClick = () => {
-        navigate("/home");
-    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const storedUserData = JSON.parse(localStorage.getItem('userData'));
+
+        if (storedUserData && storedUserData.email === email) {
+            navigate("/home");
+        } else {
+            alert("Credenciales incorrectas. Inténtalo de nuevo.");
+        }
+    };
+
+    const handleSignUp = () => {
+        navigate("/registro");
+    };
 
     const faqs = [
         { question: "¿Qué es Suiza-Flix?", answer: "Suiza-Flix es un servicio de streaming que ofrece una gran variedad de películas, series, anime, documentales y mucho más." },
@@ -37,7 +50,7 @@ function Login() {
             <div className="netflix-clone">
                 <header className="header">
                     <h1 className="logo">Suiza Flix</h1>
-                    <button className="boton-iniciar">Iniciar Sesión</button>
+                    <button className="boton-iniciar" onClick={handleSignUp}>Iniciar Sesión</button>
                 </header>
 
                 <main>
@@ -47,8 +60,8 @@ function Login() {
                             <h2>Disfruta donde quieras. Cancela cuando quieras.</h2>
                             <p>¿Quieres ver Suiza-Flix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de Suiza-Flix</p>
                             <div className="email-div">
-                                <input type="email" placeholder="Email" />
-                                <button onClick={handleClick}>Comenzar</button>
+                                <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <button onClick={handleSubmit}>Comenzar</button>
                             </div>
                         </div>
                     </section>
@@ -107,8 +120,8 @@ function Login() {
                         </div>
                         <p>¿Listo para ver? Ingresa tu email para crear o reiniciar tu membresía.</p>
                         <div className="email-div">
-                            <input type="email" placeholder="Email" />
-                            <button onClick={handleClick}>Comenzar</button>
+                            <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
+                            <button onClick={handleSubmit}>Comenzar</button>
                         </div>
                     </section>
                 </main>

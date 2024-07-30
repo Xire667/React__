@@ -1,0 +1,53 @@
+.pelicula-container {
+    position: relative;
+    max-width: 1200px; /* Ancho máximo para el contenedor */
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden; /* Ocultar contenido desbordante */
+    height: 600px; /* Altura fija para el contenedor del tráiler */
+  }
+  
+  .pelicula-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Asegura que el video esté detrás del contenido */
+  }
+  
+  .pelicula-background iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: cover; /* Ajusta el video para cubrir el área */
+  }
+  
+  .pelicula-info {
+    position: absolute; /* Cambiado a absolute para superponerse correctamente */
+    top: 0;
+    left: 0;
+    width: 400px; /* Ancho fijo para la sección de información */
+    height: 100%; /* Altura para que la sección de información cubra toda la altura del contenedor */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo más transparente */
+    color: white;
+    text-align: left; /* Alineación izquierda */
+    border-radius: 12px;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del elemento */
+    overflow-y: auto; /* Agrega scroll si el contenido es demasiado largo */
+    transition: opacity 0.3s ease; /* Suaviza el cambio de visibilidad */
+    z-index: 1; /* Asegura que la información esté por encima del video */
+  }
+  
+  .pelicula-info.hidden {
+    opacity: 0; /* Oculta la información con transición */
+  }
+  
+  .pelicula-info.visible {
+    opacity: 1; /* Muestra la información con transición */
+  }
+  

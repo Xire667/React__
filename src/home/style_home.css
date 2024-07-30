@@ -1,329 +1,244 @@
 body {
-    background-color: #000;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* style_home.css */
-
-/* Otros estilos existentes */
-
-.lupa {
-    margin-right: 5px;
-    /* Espacio entre el ícono y el texto */
+  background-color: #000;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
 }
 
 .container_home {
-    width: 100%;
-    min-height: 100vh;
-    padding-top: 60px;
-    /* Asegura que el contenido no se solape con la barra de navegación */
-    color: #fff;
-    overflow-x: hidden;
-    /* Oculta el desplazamiento horizontal */
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 60px;
+  overflow-x: hidden;
 }
 
 .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(17, 17, 17, 0.5);
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.nav_izq {
-    display: flex;
-    align-items: center;
-}
-
-.nav_dere {
-    display: flex;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(17, 17, 17, 0.5);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .logo_home {
-    color: #e50914;
-    /* Rojo característico de Netflix */
-    font-size: 24px;
-    font-family: Verdana, sans-serif;
-    cursor: pointer;
-    /* Cambia el cursor al pasar por encima */
+  color: #e50914;
+  font-size: 24px;
+  font-family: Verdana, sans-serif;
+  cursor: pointer;
 }
 
 .nav_home,
-.icons,
-.generos {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.icons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.item_nav {
-    margin: 0 15px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    /* Transición suave de estilos */
+.nav_home li {
+  margin: 0 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.item_nav:hover {
-    color: #e50914;
-    /* Cambia el color al pasar el ratón */
-}
-
-.lupa {
-    cursor: pointer;
-}
-
-.gene {
-    margin: 0 15px;
-    cursor: pointer;
-}
-
-.dvd {
-    margin-left: 18px;
+.icons .item_nav {
+  cursor: pointer;
 }
 
 .pelis {
-    background-image: url('../images/la_casa_de_papel.jpeg');
-    /* Ejemplo de fondo */
-    background-size: cover;
-    background-position: center;
-    height: calc(100vh - 60px);
-    /* Tamaño ajustado para la sección de películas */
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pelis_content {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    max-width: 600px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 .pelis_title {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.pelis_description {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.play_button,
-.mi_list_button {
-    padding: 12px 30px;
-    margin: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    /* Transición suave de estilos */
+  font-size: 48px;
+  margin-bottom: 10px;
 }
 
 .play_button {
-    background-color: #e50914;
-    /* Rojo característico de Netflix */
-    color: #fff;
+  background-color: #e50914;
+  color: #fff;
+  padding: 12px 30px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.play_button:hover,
-.mi_list_button:hover {
-    transform: scale(1.05);
-    /* Efecto de escala al pasar el ratón */
-}
-
-.mi_list_button {
-    background-color: rgba(255, 255, 255, 0.6);
-    color: #000;
+.play_button:hover {
+  transform: scale(1.05);
 }
 
 .recomenda {
-    padding: 20px;
+  padding: 20px;
 }
 
 .recomenda h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
+  margin-bottom: 10px;
+  font-size: 24px;
 }
 
+.movie-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+  gap: 20px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.5);
+}
+
+.movie-carousel::-webkit-scrollbar {
+  height: 8px;
+}
+
+.movie-carousel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+
+.movie-carousel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.movie-item {
+  flex: 0 0 auto;
+  width: 250px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+}
+
+.movie-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.movie-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  font-size: 16px;
+}
+
+.detail-button {
+  display: block;
+  margin: 10px auto;
+  background-color: #e50914;
+  color: #fff;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.detail-button:hover {
+  transform: scale(1.05);
+}
+
+.no_results_message {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
 .recomenda_lista {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    /* Desplazamiento horizontal */
-    padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
-.recomenda_lista img {
-    width: 150px;
-    height: auto;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-    /* Transición suave de transformaciones */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
 }
 
-.recomenda_lista img:hover {
-    transform: scale(1.1);
-    /* Efecto de escala al pasar el ratón */
+.movie-item {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body {
-    background-color: #000;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #fff;
-  }
-  
-  .container_home {
-    width: 100%;
-    min-height: 100vh;
-    padding-top: 60px;
-    overflow-x: hidden;
-  }
-  
-  .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(17, 17, 17, 0.5);
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-  
-  .logo_home {
-    color: #e50914;
-    font-size: 24px;
-    font-family: Verdana, sans-serif;
-    cursor: pointer;
-  }
-  
-  .nav_home,
-  .icons {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .nav_home li {
-    margin: 0 15px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .icons .item_nav {
-    cursor: pointer;
-  }
-  
-  .pelis {
-    background-size: cover;
-    background-position: center;
-    height: calc(100vh - 60px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .pelis_content {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    max-width: 600px;
-  }
-  
-  .pelis_title {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-  
-  .play_button {
-    background-color: #e50914;
-    color: #fff;
-    padding: 12px 30px;
-    margin: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    display: inline-block;
-  }
-  
-  .play_button:hover {
-    transform: scale(1.05);
-  }
-  
-  .recomenda {
-    padding: 20px;
-  }
-  
-  .recomenda h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
-  }
-  
-  .recomenda_lista {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    padding-bottom: 20px;
-  }
-  
-  .recomenda_lista img {
-    width: 150px;
-    height: auto;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-  }
-  
-  .recomenda_lista img.active {
-    transform: scale(1.1);
-  }
-  
-  .nav_buttons {
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .nav_izq,
-  .nav_dere {
-    background-color: #e50914;
-    color: #fff;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 10px;
-    transition: all 0.3s ease;
-  }
-  
-  .nav_izq:hover,
-  .nav_dere:hover {
-    transform: scale(1.05);
-  }
-  
+.movie-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.9);
+}
+
+.movie-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.movie-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+  font-size: 16px;
+}
+
+.no_results_message {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.movie-link {
+  text-decoration: none;
+  color: inherit;
+}
