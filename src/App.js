@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'; // Importa Link para la navegación
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 import Login from './login/login';
 import Home_pelis from './home/home';
 import VideoCarousel from './carrusel/VideoCarrusel';
